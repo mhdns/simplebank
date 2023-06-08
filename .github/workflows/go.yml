@@ -18,12 +18,12 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_USER: POSTGRES
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: 12345678
           POSTGRES_DB: simple_bank
         ports:
           - 5432:5432
-        options: >-
+        options: >-gits
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
