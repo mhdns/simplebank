@@ -25,4 +25,7 @@ sqlc:
 test:
 	go test -v -cover ./...
 
-.PHONY: postgres stoppg startpg createdb dropdb migrateup migratedown sqlc
+server:
+	go run main.go
+
+.PHONY: postgres stoppg startpg createdb dropdb migrateup migratedown sqlc server
